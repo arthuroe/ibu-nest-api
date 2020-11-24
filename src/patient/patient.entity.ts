@@ -1,21 +1,18 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-class User {
+class Patient {
   @PrimaryGeneratedColumn()
   public id: number;
 
   @Column()
-  public first_name: string;
-
-  @Column()
-  public last_name: string;
+  public name: string;
 
   @Column({ unique: true })
   public email: string;
 
   @Column()
-  public password: string;
+  public address: string;
 }
 
-export default User;
+export default Patient;
